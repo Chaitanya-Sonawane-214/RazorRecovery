@@ -1,85 +1,182 @@
-# RazorRecovery
+# 💰 RazorRecovery
+
+> An AI-powered payment recovery agent — built with **Python** 🐍, **scikit-learn** 🤖 and **LLM API** 🧠
 
 *An independent project built for Razorpay's AI Buildathon 2026 — Track 3: AI Revenue Recovery*
 
-## Problem statement
+RazorRecovery detects why a payment failed, decides the right recovery action using rule-based logic, uses a small ML model to judge whether retrying is worth it, and generates a human-friendly recovery message — then reports how much money was recovered across a batch, with a full audit trail. 💪
 
-[1-2 paragraphs: what revenue loss looks like — payments fail for preventable
-reasons, and most systems just log the failure instead of acting on it.
-State the specific slice you're tackling: payment degradation → root cause →
-recovery action.]
+---
 
-## What this does
+## 🌐 Live Demo
 
-[2-3 sentences: detects why a payment failed, decides the right recovery
-action, uses a small ML model to decide whether retrying is worth it, and
-logs every decision — then reports how much money was recovered across a
-batch.]
+- 🎨 **Dashboard**: [link once deployed]
+- 📊 **Sample batch report**: [link once available]
 
-## Architecture
+> ⚠️ [Add hosting notes here once deployed]
 
-[Insert architecture diagram image here]
+---
 
-Pipeline: failed payment → rule-based root cause detection → rule-based
-action selector → ML-powered recovery-probability model (stop or continue)
-→ cached LLM message generation → audit log → batch report.
+## ✨ Features
 
-## Why this design
+- 🔍 Rule-based root-cause detection for failed payments (timeout, insufficient funds, wrong OTP, expired card, bank server down)
+- 🎯 Rule-based recovery action selector (retry now, retry later, escalate)
+- 🤖 ML-powered stopping rule — a trained classifier predicts recovery probability and decides whether to keep retrying or escalate
+- 💬 AI-generated customer recovery messages (Hinglish), cached per failure type to control cost
+- 📝 Full audit trail — every decision logged with reasoning
+- 📊 Batch-level dashboard — recovery rate, rupees recovered, transaction breakdown
+- 🧪 Tested on 600 synthetic failed-payment transactions
 
-[Short paragraph explaining the reasoning: root cause and action selection
-are deterministic because payment recovery needs consistency; the ML model
-decides stopping, since that's a genuine pattern-learning problem; LLM is
-used only for natural-language messaging, and cached per failure type to
-keep cost and latency low.]
+---
 
-## Tech stack
+## 🛠️ Tech Stack
 
-- Python
-- pandas, scikit-learn (ML model)
-- [Flask / Streamlit] (dashboard)
-- Anthropic/OpenAI API (customer messaging only)
-- Faker (synthetic data generation)
+| Layer | Technology |
+|---|---|
+| 🐍 Core Language | Python |
+| 🤖 ML Model | scikit-learn (Logistic Regression) |
+| 📦 Data Handling | pandas |
+| 🎭 Synthetic Data | Faker |
+| 🧠 LLM (messaging only) | Claude API (Anthropic) |
+| 🎨 Dashboard | Streamlit |
+| 🔐 Secrets Management | python-dotenv |
 
-## Setup and run
+---
+
+## 📁 Project Structure
 
 ```bash
-git clone <repo-url>
-cd razor-recovery
+RazorRecovery/
+├── data/
+│   ├── .gitkeep
+│   └── failed_transactions.csv      # 📊 synthetic dataset (600 transactions)
+├── src/
+│   ├── generate_data.py             # 🎭 Phase 1: synthetic data generator
+│   ├── rules_engine.py              # 🎯 Phase 2: root cause + action selector
+│   ├── train_model.py               # 🤖 Phase 3: ML stopping-rule model
+│   └── messaging.py                 # 💬 Phase 4: cached LLM messaging
+├── models/
+│   ├── .gitkeep
+│   └── stopping_model.pkl           # 🤖 trained model (gitignored)
+├── app/
+│   ├── __init__.py
+│   ├── main.py                      # 🚪 FastAPI entry point, CORS setup
+│   ├── pipeline.py                  # 📝 Phase 5: batch runner + audit log logic
+│   └── routers/
+│       ├── __init__.py
+│       └── batch.py                 # 🔌 API endpoints (/run-batch, /report, /transactions)
+├── frontend/
+│   ├── index.html                   # 🖥️ dashboard UI
+│   ├── style.css                    # 🎨 styling
+│   └── script.js                    # ⚙️ fetch() calls to FastAPI backend
+├── venv/                                   
+├── requirements.txt                 # 📋 dependencies
+├── .env.example                     # 🔑 env template
+├── .env                             # 🔒 not committed
+├── .gitignore                       # 🚫 gitignored
+└── README.md
+```
+
+---
+
+## 🚀 Running Locally
+
+### ✅ Prerequisites
+- 🐍 Python 3.10+
+- 🔑 Anthropic API key (free tier credits work fine)
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/YOUR-USERNAME/RazorRecovery.git
+cd RazorRecovery
+```
+
+### 2️⃣ Create and activate a virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate      # Windows
+source venv/bin/activate   # Mac/Linux
+```
+
+### 3️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-# 1. Generate synthetic data
+### 4️⃣ Set up environment variables
+Copy `.env.example` to `.env` and add your key:
+```env
+ANTHROPIC_API_KEY=your_key_here
+```
+
+### 5️⃣ Generate synthetic data
+```bash
 python src/generate_data.py
+```
 
-# 2. Train the ML stopping-rule model
+### 6️⃣ Train the ML stopping-rule model
+```bash
 python src/train_model.py
+```
 
-# 3. Run the batch pipeline
+### 7️⃣ Run the batch pipeline
+```bash
 python src/run_batch.py
+```
 
-# 4. Launch dashboard
+### 8️⃣ Launch the dashboard
+```bash
 streamlit run dashboard/app.py
 ```
 
-## Results
+---
 
-[Fill in after running the batch: total transactions processed, recovery
-rate %, total rupees recovered, model precision/recall.]
+## 🧠 Why This Design
+
+Root-cause detection and action selection are kept **deterministic (rule-based)** because payment recovery needs consistency — an unpredictable LLM decision isn't acceptable when real money is involved.
+
+The **ML model is used only for the stopping decision** — predicting whether a specific transaction pattern is worth retrying — because that's a genuine pattern-learning problem, not a fixed business rule.
+
+The **LLM is used only for customer-facing messaging**, and cached per failure type (not called per transaction), keeping cost and latency minimal while still producing natural, human-friendly communication.
+
+---
+
+## 📊 Results
+
+*(Fill in after running the full batch)*
 
 | Metric | Value |
 |---|---|
 | Transactions processed | |
 | Recovery rate | |
 | Rupees recovered | |
-| Model precision / recall | |
+| Stopping-model precision / recall | |
 
-## Honest limitations
+---
 
-[What this doesn't do yet — e.g. execution is simulated, not connected to
-a real payment gateway; synthetic data, not real transaction history;
-stopping-rule model trained on synthetic patterns, would need retraining
-on real data.]
+## ⚠️ Honest Limitations
 
-## What I'd build next
+- Execution is **simulated**, not connected to a real Razorpay test-mode API
+- Dataset is **synthetic**, not real transaction history
+- Stopping-rule model is trained on synthetic patterns and would need retraining on real data before production use
 
-[1-2 lines: real Razorpay test-mode API integration, more failure
-categories, live retry scheduling, etc.]
+---
+
+## 🗺️ Roadmap
+
+- [x] 1️⃣ Project setup + synthetic data generator 🎭
+- [ ] 2️⃣ Rule-based root cause + action engine 🎯
+- [ ] 3️⃣ ML stopping-rule model 🤖
+- [ ] 4️⃣ LLM messaging layer 💬
+- [ ] 5️⃣ Audit log + batch runner 📝
+- [ ] 6️⃣ Dashboard 📊
+- [ ] 7️⃣ Documentation + polish 📚
+
+**Progress: 1/7 phases complete**
+
+---
+
+## 👨‍💻 Author
+
+**Chaitanya Sonawane**
+- Built for Razorpay's AI Buildathon 2026 🚀
