@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables / secrets - NEVER commit API keys
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Trained model files
+models/*.pkl
+models/*.joblib
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
