@@ -165,7 +165,7 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 ## 🗺️ Roadmap
 
 - [x] 1️⃣ Project setup + synthetic data generator 🎭
-- [ ] 2️⃣ Rule-based root cause + action engine 🎯
+- [x] 2️⃣ Rule-based root cause + action engine 🎯
 - [ ] 3️⃣ ML stopping-rule model 🤖
 - [ ] 4️⃣ LLM messaging layer 💬
 - [ ] 5️⃣ Audit log + batch runner 📝

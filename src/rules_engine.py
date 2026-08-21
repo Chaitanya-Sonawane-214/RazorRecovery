@@ -1,11 +1,3 @@
-"""
-Phase 2: Rule-based root cause detection and recovery action selection.
-
-Both mappings are deterministic (no ML, no LLM) because payment recovery
-needs consistent, explainable decisions. These represent business policy,
-not a pattern to be learned.
-"""
-
 # Maps raw payment-gateway failure codes to a human-readable root cause
 FAILURE_CODE_TO_ROOT_CAUSE = {
     "UPI_TIMEOUT": "bank_server_delay",
