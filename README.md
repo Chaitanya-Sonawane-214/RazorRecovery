@@ -147,10 +147,10 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 
 | Metric | Value |
 |---|---|
-| Transactions processed | |
-| Recovery rate | |
-| Rupees recovered | |
-| Stopping-model precision / recall | |
+| Transactions processed | 600 |
+| Recovery rate | *(pending Phase 5 batch run)* |
+| Rupees recovered | *(pending Phase 5 batch run)* |
+| Stopping-model precision / recall | 58% / 58% |
 
 ---
 
@@ -159,6 +159,11 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 - Execution is **simulated**, not connected to a real Razorpay test-mode API
 - Dataset is **synthetic**, not real transaction history
 - Stopping-rule model is trained on synthetic patterns and would need retraining on real data before production use
+- The stopping-rule model is trained on synthetic data with hand-designed
+  recovery patterns (65% accuracy, 58% precision/recall on held-out data).
+  It should be read as a learned prior demonstrating case-specific
+  decision-making, not a validated predictor — the architecture would
+  need no changes to retrain on real transaction history.
 
 ---
 
@@ -166,7 +171,7 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 
 - [x] 1️⃣ Project setup + synthetic data generator 🎭
 - [x] 2️⃣ Rule-based root cause + action engine 🎯
-- [ ] 3️⃣ ML stopping-rule model 🤖
+- [x] 3️⃣ ML stopping-rule model 🤖
 - [ ] 4️⃣ LLM messaging layer 💬
 - [ ] 5️⃣ Audit log + batch runner 📝
 - [ ] 6️⃣ Dashboard 📊
