@@ -5,6 +5,7 @@ env/
 
 # Environment variables / secrets - NEVER commit API keys
 .env
+details_required.txt
 
 # Python cache
 __pycache__/
