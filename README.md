@@ -173,7 +173,7 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 - [x] 1️⃣ Project setup + synthetic data generator 🎭
 - [x] 2️⃣ Rule-based root cause + action engine 🎯
 - [x] 3️⃣ ML stopping-rule model 🤖
-- [ ] 4️⃣ LLM messaging layer 💬
+- [x] 4️⃣ LLM messaging layer 💬
 - [ ] 5️⃣ Audit log + batch runner 📝
 - [ ] 6️⃣ Dashboard 📊
 - [ ] 7️⃣ Documentation + polish 📚
