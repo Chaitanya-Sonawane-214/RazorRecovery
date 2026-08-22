@@ -1,0 +1,959 @@
+transaction_id,customer_id,amount,payment_method,failure_code,root_cause,recommended_action,recovery_probability,attempt_number,final_status,customer_message,processed_at
+TXN10000,CUST2679,569.18,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:54
+TXN10001,CUST2535,13404.15,UPI,WRONG_OTP,user_error,send_otp_help_message,0.27,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:54
+TXN10002,CUST9928,7678.76,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.523,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:54
+TXN10003,CUST3615,6847.74,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.108,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:54
+TXN10004,CUST2674,5235.05,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.46,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:54
+TXN10005,CUST8527,1630.5,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.579,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:54
+TXN10006,CUST6925,14602.09,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.359,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:54
+TXN10007,CUST2307,10627.37,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.152,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:54
+TXN10008,CUST6977,13023.82,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.078,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:55
+TXN10009,CUST2169,5457.36,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.582,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10010,CUST4598,2732.02,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.293,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10011,CUST6168,12674.05,UPI,WRONG_OTP,user_error,send_otp_help_message,0.408,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10012,CUST8517,1178.66,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10013,CUST7543,2265.67,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.579,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10014,CUST1771,14960.42,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.303,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10015,CUST2040,2461.2,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.033,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:55
+TXN10016,CUST1188,9018.74,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.355,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10017,CUST5808,1894.48,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.312,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10018,CUST9317,6914.56,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.061,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10019,CUST4258,13083.55,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.434,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10020,CUST2832,11484.92,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.527,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10021,CUST2290,13204.96,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.729,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10022,CUST3060,7392.14,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.238,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10023,CUST7932,7233.65,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.723,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10024,CUST7118,13947.85,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.588,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10025,CUST1344,7859.64,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.25,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10026,CUST1964,3604.93,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10027,CUST8953,13600.12,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.729,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10028,CUST7669,2157.35,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10029,CUST1887,1633.67,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.767,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10030,CUST2790,14765.63,UPI,WRONG_OTP,user_error,send_otp_help_message,0.41,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10031,CUST8579,3014.28,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10032,CUST2604,13864.25,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.496,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10033,CUST4872,14989.38,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.243,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10034,CUST3697,7386.97,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.426,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10035,CUST5673,14782.56,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.063,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10036,CUST1958,14368.26,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.359,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10037,CUST9238,8224.03,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10038,CUST4044,8060.2,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.239,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10039,CUST5033,1204.89,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.718,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10040,CUST9565,787.22,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.245,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10041,CUST5915,4058.59,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.722,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10042,CUST2638,13949.4,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.254,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10043,CUST2127,3353.9,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.722,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10044,CUST5956,5668.37,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.06,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:55
+TXN10045,CUST2697,14811.04,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.155,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10046,CUST3546,2186.64,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.365,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10047,CUST5325,9151.09,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.726,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10048,CUST5533,3915.85,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.247,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10049,CUST8239,5135.97,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.58,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10050,CUST3442,6529.19,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.249,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10051,CUST6974,12551.84,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10052,CUST5088,11982.41,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.014,3,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:55
+TXN10053,CUST4878,5433.8,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.144,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10054,CUST6442,14647.83,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.018,3,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:55
+TXN10055,CUST2771,6292.77,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.461,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10056,CUST8541,772.16,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.348,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10057,CUST7528,12343.76,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.726,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10058,CUST9785,12992.29,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.729,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10059,CUST5349,607.52,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10060,CUST9379,9028.85,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.586,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10061,CUST1027,13512.57,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.727,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10062,CUST6409,12136.17,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10063,CUST6067,10017.8,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.152,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10064,CUST7211,5026.83,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.314,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10065,CUST5978,13561.42,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.47,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10066,CUST4501,6561.77,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.724,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10067,CUST6491,11947.08,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.187,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10068,CUST4262,14289.55,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.588,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10069,CUST8461,883.01,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.637,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10070,CUST7547,9520.16,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.185,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10071,CUST2746,9909.31,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.372,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10072,CUST2988,3438.07,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.522,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10073,CUST9270,12060.77,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.062,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10074,CUST8777,13621.36,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.137,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10075,CUST4919,11326.05,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.188,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10076,CUST9849,1345.83,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10077,CUST2052,2431.44,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.639,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10078,CUST7883,5096.38,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.351,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10079,CUST7232,11592.75,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.088,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10080,CUST7865,14152.52,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.189,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10081,CUST8956,11072.32,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10082,CUST3091,5174.05,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.641,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10083,CUST2375,8104.56,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.643,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10084,CUST6363,2207.49,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.349,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10085,CUST7906,5036.64,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.77,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10086,CUST6733,1411.29,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.518,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10087,CUST4266,1214.62,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.517,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10088,CUST4571,9395.39,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.061,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:55
+TXN10089,CUST2876,3991.66,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10090,CUST6111,2622.9,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.46,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10091,CUST2245,13638.7,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.359,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10092,CUST2983,12492.29,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10093,CUST7071,8575.37,UPI,WRONG_OTP,user_error,send_otp_help_message,0.405,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10094,CUST2729,9783.29,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.371,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10095,CUST9548,5559.75,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.225,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10096,CUST5397,4196.49,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.769,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10097,CUST8613,3832.57,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.67,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10098,CUST3979,10088.86,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10099,CUST5526,5450.76,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10100,CUST9004,7845.6,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10101,CUST1282,3756.03,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.223,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10102,CUST8753,3478.85,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10103,CUST6023,5286.95,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10104,CUST4033,1984.83,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.719,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10105,CUST9595,11131.09,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.587,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10106,CUST5952,14711.54,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.303,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10107,CUST5786,8104.73,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10108,CUST5658,2068.06,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.521,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:55
+TXN10109,CUST8827,6718.38,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.06,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10110,CUST1878,1166.15,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.767,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10111,CUST7818,12204.71,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.728,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10112,CUST8253,11902.76,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.186,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:55
+TXN10113,CUST2625,8909.76,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.772,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10114,CUST4929,3274.47,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10115,CUST8699,1310.04,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.668,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:55
+TXN10116,CUST4824,3625.08,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.581,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10117,CUST3441,11859.64,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.726,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10118,CUST5728,12433.97,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.677,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10119,CUST9199,7136.2,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.185,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10120,CUST5102,6678.27,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.086,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10121,CUST5415,3587.31,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.236,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10122,CUST5557,11493.78,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10123,CUST7690,8862.46,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.34,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10124,CUST5722,10117.65,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10125,CUST6296,6126.09,UPI,WRONG_OTP,user_error,send_otp_help_message,0.402,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10126,CUST7770,11633.48,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.527,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10127,CUST4335,7872.42,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.643,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10128,CUST2989,2138.13,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10129,CUST1224,9523.96,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.584,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10130,CUST3522,1578.59,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.246,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10131,CUST8736,10805.45,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.302,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10132,CUST3236,8358.27,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.772,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10133,CUST5377,4287.74,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.076,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10134,CUST9022,4385.3,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.018,3,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10135,CUST9903,6808.35,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.077,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10136,CUST7274,14006.15,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.062,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10137,CUST7246,11677.83,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.676,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10138,CUST9229,10022.26,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.299,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10139,CUST9617,5112.85,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.367,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10140,CUST3529,426.16,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.717,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10141,CUST2315,11766.36,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.728,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10142,CUST8994,12814.5,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.013,4,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10143,CUST5708,730.34,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.047,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10144,CUST2646,11251.89,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.342,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10145,CUST5806,10470.91,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.252,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10146,CUST3950,6573.6,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10147,CUST3344,1367.81,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.638,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10148,CUST8622,9640.63,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.773,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10149,CUST5901,10228.32,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.725,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10150,CUST7302,6479.2,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.298,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10151,CUST5837,1777.58,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.042,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10152,CUST1803,12484.39,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.775,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10153,CUST6772,11228.29,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.588,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10154,CUST3240,3013.14,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.58,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10155,CUST6977,13570.28,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.254,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10156,CUST4289,1533.06,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.459,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10157,CUST3695,8182.77,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10158,CUST6549,12405.23,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.343,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10159,CUST7511,7130.77,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.048,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10160,CUST5332,12107.7,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.728,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10161,CUST7086,6930.29,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.185,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10162,CUST6374,3659.8,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.52,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10163,CUST5951,3475.46,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.519,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10164,CUST9071,1925.92,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.047,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10165,CUST9850,3674.28,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10166,CUST9017,11185.32,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.109,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10167,CUST8264,14097.92,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.304,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10168,CUST9920,3693.7,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10169,CUST3001,9743.08,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.675,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10170,CUST1349,12397.85,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.528,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10171,CUST4394,5135.27,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.58,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10172,CUST1046,12233.0,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10173,CUST2801,14763.6,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.728,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10174,CUST6304,580.57,UPI,WRONG_OTP,user_error,send_otp_help_message,0.397,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10175,CUST2041,4126.7,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.579,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10176,CUST1710,11714.43,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.253,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10177,CUST1996,13649.43,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.47,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10178,CUST8267,12739.87,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.647,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10179,CUST9984,1394.78,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.718,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10180,CUST2624,5836.77,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.463,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10181,CUST7779,1892.44,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.457,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10182,CUST6120,6911.24,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.642,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10183,CUST2494,5739.03,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.313,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10184,CUST3131,1578.9,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.026,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10185,CUST7929,8879.27,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.186,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10186,CUST9313,10871.42,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.034,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10187,CUST7022,9919.35,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.428,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10188,CUST1430,4322.09,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.423,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10189,CUST6062,9935.56,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10190,CUST7566,5394.5,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.424,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10191,CUST7163,11166.08,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.676,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10192,CUST2391,5244.6,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10193,CUST7947,2501.74,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.026,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10194,CUST6655,6741.7,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.298,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10195,CUST4612,4391.33,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.351,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10196,CUST3248,9069.61,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.251,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10197,CUST3878,4483.11,UPI,WRONG_OTP,user_error,send_otp_help_message,0.401,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10198,CUST6802,8081.75,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.723,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10199,CUST2275,12953.97,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.677,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10200,CUST2887,8720.81,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.043,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10201,CUST6928,14499.72,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.11,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10202,CUST2288,12698.21,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.727,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10203,CUST2251,4791.37,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10204,CUST3419,1886.71,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.105,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10205,CUST2234,2366.52,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.719,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10206,CUST8354,11637.92,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.774,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10207,CUST3473,13254.19,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.201,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10208,CUST6766,7139.5,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.185,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10209,CUST5703,4793.35,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.351,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10210,CUST8581,12990.76,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.528,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10211,CUST4084,14322.58,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.255,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10212,CUST6626,7238.79,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.284,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10213,CUST8199,1447.16,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.718,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10214,CUST7697,9224.73,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10215,CUST2079,10247.37,UPI,WRONG_OTP,user_error,send_otp_help_message,0.267,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10216,CUST3463,8457.41,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.772,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10217,CUST7421,8824.13,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.427,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10218,CUST6381,10690.45,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.675,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10219,CUST6928,10117.39,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.027,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10220,CUST4145,4770.53,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10221,CUST9317,2235.1,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.668,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10222,CUST3147,12559.61,UPI,WRONG_OTP,user_error,send_otp_help_message,0.269,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10223,CUST3712,2482.1,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.106,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10224,CUST8277,845.69,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.311,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10225,CUST8684,11335.14,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.357,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10226,CUST7256,3070.63,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10227,CUST3267,6395.6,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.107,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10228,CUST2680,971.31,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.023,3,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10229,CUST5469,7834.97,UPI,WRONG_OTP,user_error,send_otp_help_message,0.404,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10230,CUST8391,7797.13,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.354,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10231,CUST4862,13970.91,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.079,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10232,CUST6493,1406.84,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.292,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10233,CUST3273,2235.61,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.195,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10234,CUST4533,7142.3,UPI,WRONG_OTP,user_error,send_otp_help_message,0.162,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10235,CUST5934,8321.85,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.077,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10236,CUST9189,3728.14,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.769,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10237,CUST1025,442.26,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.18,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10238,CUST9576,3759.59,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.35,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10239,CUST7338,1200.72,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.668,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10240,CUST4950,3953.28,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.67,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10241,CUST6546,9497.83,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.466,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10242,CUST3986,2790.49,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.012,4,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10243,CUST4268,1132.95,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.075,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10244,CUST9897,4870.13,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.06,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10245,CUST1783,741.02,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.292,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10246,CUST7553,5111.82,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.026,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10247,CUST9151,13440.53,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.532,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10248,CUST2293,11999.7,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.11,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10249,CUST2311,14927.45,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.303,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10250,CUST8272,4574.77,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.64,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10251,CUST1939,825.9,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.182,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10252,CUST3621,9634.82,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.726,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10253,CUST7001,2312.28,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10254,CUST7077,14252.06,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.154,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10255,CUST5566,11493.41,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10256,CUST2929,1878.15,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.719,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10257,CUST9047,4051.55,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.769,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10258,CUST8292,2207.92,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.668,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10259,CUST9882,12195.41,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.588,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10260,CUST3852,4638.66,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.579,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10261,CUST4878,7729.09,UPI,WRONG_OTP,user_error,send_otp_help_message,0.093,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10262,CUST3126,588.03,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.458,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10263,CUST8842,1475.08,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10264,CUST2215,11583.4,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.253,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10265,CUST3981,10265.29,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10266,CUST5982,2108.82,UPI,WRONG_OTP,user_error,send_otp_help_message,0.159,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10267,CUST5653,4974.7,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10268,CUST9740,3908.21,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.06,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10269,CUST6531,9686.25,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.724,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10270,CUST5336,8541.11,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.048,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10271,CUST9938,11550.76,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.376,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10272,CUST7653,14358.38,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.776,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10273,CUST8609,1279.07,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.668,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10274,CUST6658,9178.18,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.43,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10275,CUST4960,2134.47,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.721,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10276,CUST7293,4157.85,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10277,CUST6123,6387.81,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.018,3,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10278,CUST1379,2557.43,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10279,CUST6781,6019.38,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.338,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10280,CUST2761,4363.36,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.769,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10281,CUST7563,13260.23,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.189,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10282,CUST9261,8514.45,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.585,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10283,CUST7114,8337.43,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.25,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10284,CUST9341,5217.8,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.314,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10285,CUST8761,794.81,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.245,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10286,CUST3662,2403.47,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.293,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10287,CUST9351,9323.82,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.187,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10288,CUST6427,10689.06,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10289,CUST1436,14702.47,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.322,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10290,CUST3793,4129.12,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.182,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10291,CUST1517,10873.23,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.356,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10292,CUST3481,10567.41,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.299,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10293,CUST2020,3216.8,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.133,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10294,CUST7173,7876.03,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.117,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10295,CUST5331,2762.27,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10296,CUST5876,3044.7,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10297,CUST5480,10632.24,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.529,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10298,CUST6654,8687.03,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.491,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10299,CUST2294,12108.12,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.728,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10300,CUST9824,6746.61,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.584,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10301,CUST4920,8517.43,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10302,CUST7771,10113.21,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.584,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10303,CUST3587,7191.05,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.722,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10304,CUST5706,14038.41,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.359,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10305,CUST1611,9758.94,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.525,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10306,CUST7504,2790.13,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.28,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10307,CUST2758,2956.6,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.195,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10308,CUST9092,5157.96,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.337,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10309,CUST6417,2185.29,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.075,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10310,CUST6523,6991.39,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.584,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10311,CUST7643,8602.73,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.463,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10312,CUST3303,7825.67,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.048,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10313,CUST5374,14050.15,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.254,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10314,CUST4871,4668.1,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.67,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10315,CUST6095,1948.85,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10316,CUST3188,9652.57,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.466,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10317,CUST8714,6933.14,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.299,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10318,CUST2341,12069.33,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.318,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10319,CUST2011,8016.49,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.299,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10320,CUST6375,13562.65,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.034,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10321,CUST9361,6738.68,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.033,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10322,CUST1945,1022.47,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.292,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10323,CUST1049,10156.63,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.187,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10324,CUST9866,8758.59,UPI,WRONG_OTP,user_error,send_otp_help_message,0.405,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10325,CUST5703,14031.76,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.243,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10326,CUST8348,11580.56,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.357,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10327,CUST9835,13620.06,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.078,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10328,CUST9664,12932.1,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.677,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10329,CUST8585,14685.1,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.53,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10330,CUST6671,8257.34,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.241,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10331,CUST1256,2988.7,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.669,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10332,CUST1797,1194.97,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.668,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10333,CUST1924,853.75,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.767,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10334,CUST6224,14903.55,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.433,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10335,CUST9540,11633.34,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.302,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10336,CUST3869,4646.71,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.521,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10337,CUST7244,6522.0,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.353,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10338,CUST4012,4916.59,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.524,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10339,CUST8586,7207.55,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.462,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10340,CUST4978,8522.87,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.644,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10341,CUST2514,5087.22,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.237,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10342,CUST1647,12475.04,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.253,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10343,CUST6455,2984.0,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.059,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10344,CUST2922,13653.02,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.289,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10345,CUST7498,11363.85,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.317,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10346,CUST6886,8370.33,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10347,CUST8692,5522.1,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.77,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10348,CUST4625,4938.77,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.459,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10349,CUST4768,439.07,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.52,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10350,CUST6530,12533.6,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.229,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10351,CUST6770,12359.38,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.774,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10352,CUST1962,10860.36,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.773,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10353,CUST1104,12618.05,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.049,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10354,CUST4583,12669.5,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10355,CUST9719,5722.74,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.225,2,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10356,CUST9228,374.41,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.293,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10357,CUST3439,10175.36,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.061,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10358,CUST7502,9372.38,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.43,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10359,CUST4700,14397.57,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.649,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10360,CUST1519,12455.15,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.528,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10361,CUST3807,5812.49,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.77,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10362,CUST2562,12710.73,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.589,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10363,CUST8790,13803.37,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.062,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10364,CUST1539,13877.48,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.434,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10365,CUST7525,12786.18,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.242,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10366,CUST9856,4628.6,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.579,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10367,CUST2284,11382.77,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.585,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10368,CUST2245,14619.96,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.255,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10369,CUST5478,11581.05,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.343,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10370,CUST8075,6867.59,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.461,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10371,CUST5037,8870.54,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.772,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10372,CUST3527,1413.24,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.456,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10373,CUST8286,4886.15,UPI,WRONG_OTP,user_error,send_otp_help_message,0.401,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10374,CUST9395,4191.81,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10375,CUST6315,587.7,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.182,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10376,CUST4977,381.65,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.075,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10377,CUST5397,2709.0,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.349,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10378,CUST2260,1135.42,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.348,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10379,CUST2752,14174.43,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.23,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10380,CUST6399,299.16,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.767,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10381,CUST4290,6572.55,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10382,CUST9044,2828.21,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.076,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10383,CUST7437,11773.0,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.728,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10384,CUST1440,13994.53,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.188,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10385,CUST2133,7031.47,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.722,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10386,CUST5961,11975.52,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.043,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:56
+TXN10387,CUST8851,9947.87,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.645,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10388,CUST6890,8108.17,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.354,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10389,CUST6816,12221.81,UPI,WRONG_OTP,user_error,send_otp_help_message,0.408,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10390,CUST8052,9267.25,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.341,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10391,CUST4621,1658.48,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.718,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10392,CUST2712,5988.18,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10393,CUST3321,13824.02,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.678,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10394,CUST2599,5276.73,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10395,CUST2885,10511.79,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10396,CUST4996,5276.9,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.521,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10397,CUST4798,8367.82,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.186,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10398,CUST1478,9520.08,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.316,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10399,CUST4519,13269.72,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.377,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:56
+TXN10400,CUST9796,11334.17,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.527,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10401,CUST9019,5023.9,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.77,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10402,CUST6700,9658.45,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.227,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10403,CUST5873,6975.79,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.107,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10404,CUST2916,8934.08,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.724,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10405,CUST7286,10462.55,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.773,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:56
+TXN10406,CUST3298,7402.21,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.184,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:56
+TXN10407,CUST8939,12661.22,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.374,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10408,CUST8272,12265.01,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.774,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10409,CUST1535,1422.61,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.148,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10410,CUST9115,8156.15,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.582,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10411,CUST7010,1874.64,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.246,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10412,CUST2677,11400.19,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.357,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10413,CUST8368,9873.99,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.464,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10414,CUST4882,12960.42,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.677,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10415,CUST8015,11116.41,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.432,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10416,CUST6747,2259.82,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.422,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10417,CUST5740,9033.09,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.298,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10418,CUST7743,14295.43,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.255,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10419,CUST3396,14888.79,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.589,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10420,CUST5402,12461.36,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.531,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10421,CUST2525,5751.93,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.15,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10422,CUST1040,11296.83,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.302,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10423,CUST6869,12737.92,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.027,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10424,CUST4470,11975.83,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.078,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10425,CUST8951,4977.73,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10426,CUST8529,13433.38,UPI,WRONG_OTP,user_error,send_otp_help_message,0.409,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10427,CUST8009,13955.54,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.727,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10428,CUST5489,10390.85,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.429,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10429,CUST3711,5533.8,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.671,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10430,CUST2559,9458.57,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.724,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10431,CUST8291,7256.22,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.582,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10432,CUST3165,10494.53,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.24,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10433,CUST6133,3587.64,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.149,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10434,CUST3181,4628.28,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.224,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10435,CUST3688,10221.31,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.252,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10436,CUST8248,10891.72,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.109,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10437,CUST7291,1482.07,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.047,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10438,CUST5065,6554.38,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10439,CUST5942,9079.72,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.186,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10440,CUST1894,9182.12,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.583,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10441,CUST9185,11947.71,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.466,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10442,CUST3162,1250.05,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.047,4,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10443,CUST8717,12616.64,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.358,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10444,CUST4534,11601.2,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.527,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10445,CUST9209,1094.0,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.767,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10446,CUST3501,6468.34,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.525,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10447,CUST6353,4785.93,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.282,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10448,CUST4909,9587.19,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.251,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10449,CUST1901,1475.04,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.767,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10450,CUST1185,11176.81,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10451,CUST5403,14304.59,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.73,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10452,CUST9582,1946.36,UPI,WRONG_OTP,user_error,send_otp_help_message,0.399,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10453,CUST1908,10742.1,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.675,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10454,CUST2889,8589.48,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10455,CUST1753,7730.12,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.37,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10456,CUST1579,5867.48,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10457,CUST6241,13726.34,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.359,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10458,CUST1862,1351.81,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10459,CUST8620,12104.01,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.241,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10460,CUST1130,11647.98,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.062,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10461,CUST7033,4514.9,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.184,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10462,CUST5016,7501.23,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.184,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10463,CUST1157,13999.42,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.678,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10464,CUST2703,220.64,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.483,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10465,CUST3332,14750.1,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.776,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10466,CUST7102,1575.89,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.193,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10467,CUST7461,11268.66,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.252,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10468,CUST5778,8603.31,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.644,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10469,CUST6211,4861.45,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.641,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10470,CUST2785,3656.68,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.294,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10471,CUST6870,2631.91,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10472,CUST2481,3272.22,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.722,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10473,CUST3430,10353.3,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.675,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10474,CUST5896,3872.89,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.722,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10475,CUST5093,14862.0,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.243,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10476,CUST4641,1707.33,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.718,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10477,CUST2376,12390.19,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.589,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10478,CUST8265,4029.8,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.247,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10479,CUST1829,1560.38,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.06,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10480,CUST7990,8693.06,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.772,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10481,CUST3435,3377.01,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10482,CUST8848,9363.43,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.584,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10483,CUST9614,4339.96,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10484,CUST6883,14912.49,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.243,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10485,CUST7363,11765.02,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.11,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10486,CUST5602,584.76,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.718,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10487,CUST3615,14874.66,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.591,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10488,CUST1916,9921.25,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.726,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10489,CUST3846,14227.42,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.532,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10490,CUST6761,8968.88,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.43,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10491,CUST9064,8540.94,Credit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.427,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10492,CUST4584,2797.42,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.247,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10493,CUST3137,7273.72,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.428,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10494,CUST3320,2825.58,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10495,CUST7481,12727.76,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.119,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10496,CUST8157,5180.44,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.297,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10497,CUST6846,14417.76,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.471,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10498,CUST5825,8916.05,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.724,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10499,CUST1530,10986.43,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.493,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10500,CUST9129,4908.93,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.58,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10501,CUST2453,11230.83,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10502,CUST5088,10116.03,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.062,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10503,CUST8179,5386.47,UPI,WRONG_OTP,user_error,send_otp_help_message,0.264,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10504,CUST9946,14542.68,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.533,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10505,CUST1547,12466.17,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10506,CUST7151,4916.33,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.671,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10507,CUST8909,1309.11,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.668,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10508,CUST1877,6583.02,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.313,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10509,CUST9849,3241.35,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10510,CUST9043,4365.82,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10511,CUST8869,5539.63,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.77,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10512,CUST8758,579.91,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.576,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10513,CUST5341,4762.94,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.076,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10514,CUST4056,8252.61,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.723,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10515,CUST2009,4096.04,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.351,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10516,CUST9871,10507.47,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.675,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10517,CUST9561,11395.32,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.186,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10518,CUST5896,8125.15,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.226,2,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10519,CUST3415,13561.01,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.678,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10520,CUST4471,11406.15,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.287,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10521,CUST4308,2066.68,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.075,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10522,CUST2097,9482.58,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.726,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10523,CUST1202,8433.75,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.429,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10524,CUST2641,9420.88,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.528,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10525,CUST6633,8527.28,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.524,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10526,CUST3821,4108.49,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.042,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10527,CUST6431,2328.16,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.768,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10528,CUST1331,928.56,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.142,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10529,CUST2609,11945.84,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.728,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10530,CUST6257,3573.0,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.283,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10531,CUST7671,6367.65,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.672,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10532,CUST3604,11440.26,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.2,3,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10533,CUST1474,10701.34,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.773,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10534,CUST8478,13152.55,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.431,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10535,CUST9275,5532.91,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.721,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10536,CUST8308,13861.41,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.254,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10537,CUST5237,13082.99,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.729,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10538,CUST4511,10394.68,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.467,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10539,CUST1328,9780.87,Credit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.061,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10540,CUST3837,14513.61,UPI,CARD_EXPIRED,card_issue,request_new_payment_method,0.049,1,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10541,CUST5511,324.27,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.181,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10542,CUST5950,5771.21,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.298,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10543,CUST7131,12399.62,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.376,2,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10544,CUST2045,8987.43,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.3,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10545,CUST5895,4291.23,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.426,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10546,CUST7620,7855.46,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.427,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10547,CUST5250,10274.87,UPI,WRONG_OTP,user_error,send_otp_help_message,0.267,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10548,CUST4111,6187.47,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.522,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10549,CUST9311,10757.58,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.493,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10550,CUST5237,2714.97,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.719,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10551,CUST2463,8473.23,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.116,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10552,CUST7089,3504.48,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.722,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10553,CUST2166,4551.25,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.67,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10554,CUST5888,3078.44,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.085,3,escalated_max_attempts,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10555,CUST7704,13088.44,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.301,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10556,CUST3954,13414.0,Net Banking,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.775,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10557,CUST8406,7415.68,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.462,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10558,CUST2442,11465.42,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.585,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10559,CUST7280,6618.36,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.771,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10560,CUST9700,8099.52,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.286,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10561,CUST6113,10215.55,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10562,CUST5885,5875.93,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.723,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10563,CUST3192,6947.17,Debit Card,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.724,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10564,CUST7609,13540.38,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.59,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10565,CUST9267,3519.18,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.72,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10566,CUST9761,5624.92,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.671,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10567,CUST1323,8989.67,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.152,2,escalated_low_probability,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10568,CUST8772,1912.81,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.768,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10569,CUST9524,3240.53,UPI,WRONG_OTP,user_error,send_otp_help_message,0.4,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10570,CUST9381,9162.99,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.724,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10571,CUST4272,1941.59,UPI,WRONG_OTP,user_error,send_otp_help_message,0.261,2,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10572,CUST3627,12506.01,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.466,1,recovered,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10573,CUST4842,7545.55,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.582,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10574,CUST3443,10139.84,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.372,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10575,CUST5192,11736.77,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.527,2,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10576,CUST3862,6959.38,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.299,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10577,CUST2898,12813.13,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.019,3,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10578,CUST3793,11421.18,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.676,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10579,CUST6615,13438.9,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.434,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10580,CUST8835,6130.91,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.77,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10581,CUST1960,9802.58,Credit Card,WRONG_OTP,user_error,send_otp_help_message,0.464,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10582,CUST8178,12696.22,UPI,BANK_SERVER_DOWN,bank_server_delay,retry_after_10_min,0.677,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10583,CUST3140,5819.69,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.583,2,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10584,CUST6148,7423.71,Net Banking,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.353,1,recovered,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10585,CUST6542,13051.19,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.288,4,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10586,CUST8895,10385.66,UPI,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.252,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10587,CUST1894,10208.85,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.773,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10588,CUST2226,14028.63,Net Banking,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.496,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10589,CUST4648,4944.7,Debit Card,WRONG_OTP,user_error,send_otp_help_message,0.116,4,escalated_max_attempts,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10590,CUST8341,5803.22,Credit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.296,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57
+TXN10591,CUST1291,7576.65,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.725,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10592,CUST5990,6302.02,UPI,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.368,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10593,CUST1889,8522.08,Net Banking,CARD_EXPIRED,card_issue,request_new_payment_method,0.013,4,escalated_max_attempts,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10594,CUST8751,12695.74,Debit Card,CARD_EXPIRED,card_issue,request_new_payment_method,0.034,2,escalated_low_probability,Your payment failed due to an issue with your card. Please request a new payment method to complete your purchase.,2026-08-22 21:31:57
+TXN10595,CUST4633,5576.12,Net Banking,WRONG_OTP,user_error,send_otp_help_message,0.524,1,retry_failed,Your payment failed due to an internal user error.,2026-08-22 21:31:57
+TXN10596,CUST2741,5455.41,Debit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.723,1,recovered,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10597,CUST7704,2628.66,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.422,3,escalated_max_attempts,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10598,CUST4532,9240.22,Credit Card,UPI_TIMEOUT,bank_server_delay,retry_after_10_min,0.724,1,retry_failed,"""I apologize for the inconvenience, we are retrying your payment attempt in the next 10 minutes due to a temporary bank server delay.""",2026-08-22 21:31:57
+TXN10599,CUST3018,11764.8,Debit Card,INSUFFICIENT_FUNDS,no_money,send_reminder_after_6_hours,0.302,1,retry_failed,"Here's a possible message:
+
+""Unfortunately, we've noticed that you haven't made a payment yet. Our system is reminding you to make your payment after 6 hours.""",2026-08-22 21:31:57

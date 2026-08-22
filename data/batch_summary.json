@@ -1,0 +1,27 @@
+{
+  "total_transactions": 600,
+  "total_amount_at_risk": 4671039.05,
+  "recovered": {
+    "count": 223,
+    "amount": 1678471.49
+  },
+  "escalated_max_attempts": {
+    "count": 110,
+    "amount": 933054.1
+  },
+  "escalated_low_probability": {
+    "count": 75,
+    "amount": 571331.2
+  },
+  "retry_failed": {
+    "count": 192,
+    "amount": 1488182.26
+  },
+  "recovery_rate_percent": 37.2,
+  "root_cause_breakdown": {
+    "bank_server_delay": 287,
+    "no_money": 179,
+    "user_error": 82,
+    "card_issue": 52
+  }
+}
