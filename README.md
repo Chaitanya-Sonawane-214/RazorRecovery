@@ -164,6 +164,7 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
   It should be read as a learned prior demonstrating case-specific
   decision-making, not a validated predictor — the architecture would
   need no changes to retrain on real transaction history.
+- Early testing revealed the LLM would occasionally hallucinate actions (e.g., inventing a refund that wasn't part of the system's decision). We fixed this by explicitly grounding the prompt with the exact action chosen by the rule-based engine, preventing the LLM from inventing unauthorized actions — a real example of why deterministic decision-making + constrained LLM output is safer than LLM-driven decisions for financial systems.
 
 ---
 
