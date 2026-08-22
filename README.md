@@ -143,14 +143,29 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 
 ## 📊 Results
 
-*(Fill in after running the full batch)*
-
 | Metric | Value |
 |---|---|
 | Transactions processed | 600 |
-| Recovery rate | *(pending Phase 5 batch run)* |
-| Rupees recovered | *(pending Phase 5 batch run)* |
+| Recovery rate | 37.2% |
+| Rupees recovered | ₹16,78,471 |
+| Total amount at risk | ₹46,71,039 |
 | Stopping-model precision / recall | 58% / 58% |
+
+---
+
+### Batch Results Breakdown
+
+| Outcome | Transactions | Amount |
+|---|---|---|
+| Recovered | 223 | ₹16,78,471 |
+| Escalated (max attempts reached) | 110 | ₹9,33,054 |
+| Escalated (low recovery probability) | 75 | ₹5,71,331 |
+| Retry attempted, failed | 192 | ₹14,88,182 |
+
+*75 transactions (₹5.71L) were escalated immediately without wasting a 
+retry, based on the ML model predicting low recovery probability — 
+demonstrating the value of case-specific stopping decisions over a 
+fixed retry-count rule.*
 
 ---
 
@@ -174,7 +189,7 @@ The **LLM is used only for customer-facing messaging**, and cached per failure t
 - [x] 2️⃣ Rule-based root cause + action engine 🎯
 - [x] 3️⃣ ML stopping-rule model 🤖
 - [x] 4️⃣ LLM messaging layer 💬
-- [ ] 5️⃣ Audit log + batch runner 📝
+- [x] 5️⃣ Audit log + batch runner 📝
 - [ ] 6️⃣ Dashboard 📊
 - [ ] 7️⃣ Documentation + polish 📚
 
