@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RazorRecovery Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>💰 RazorRecovery</h1>
+        <p class="subtitle">AI-powered payment recovery — batch results dashboard</p>
+    </header>
+
+    <main>
+        <!-- Summary cards -->
+        <section class="summary-grid" id="summary-grid">
+            <div class="card">
+                <span class="card-label">Total Processed</span>
+                <span class="card-value" id="total-transactions">—</span>
+            </div>
+            <div class="card highlight">
+                <span class="card-label">Recovery Rate</span>
+                <span class="card-value" id="recovery-rate">—</span>
+            </div>
+            <div class="card success">
+                <span class="card-label">Amount Recovered</span>
+                <span class="card-value" id="amount-recovered">—</span>
+            </div>
+            <div class="card">
+                <span class="card-label">Total At Risk</span>
+                <span class="card-value" id="amount-at-risk">—</span>
+            </div>
+        </section>
+
+        <!-- Breakdown -->
+        <section class="breakdown">
+            <h2>Outcome Breakdown</h2>
+            <div class="breakdown-bars" id="breakdown-bars"></div>
+        </section>
+
+        <!-- Transaction table -->
+        <section class="transactions">
+            <div class="transactions-header">
+                <h2>Transactions</h2>
+                <select id="status-filter">
+                    <option value="">All statuses</option>
+                    <option value="recovered">Recovered</option>
+                    <option value="escalated_max_attempts">Escalated (max attempts)</option>
+                    <option value="escalated_low_probability">Escalated (low probability)</option>
+                    <option value="retry_failed">Retry failed</option>
+                </select>
+            </div>
+            <div class="table-wrapper">
+                <table id="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Amount</th>
+                            <th>Root Cause</th>
+                            <th>Action</th>
+                            <th>Recovery Prob.</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactions-body">
+                        <tr><td colspan="6" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
