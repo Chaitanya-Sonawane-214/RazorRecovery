@@ -190,7 +190,7 @@ fixed retry-count rule.*
 - [x] 3️⃣ ML stopping-rule model 🤖
 - [x] 4️⃣ LLM messaging layer 💬
 - [x] 5️⃣ Audit log + batch runner 📝
-- [ ] 6️⃣ Dashboard 📊
+- [x] 6️⃣ Dashboard 📊
 - [ ] 7️⃣ Documentation + polish 📚
 
 **Progress: 1/7 phases complete**
