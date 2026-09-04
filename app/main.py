@@ -9,12 +9,11 @@ from fastapi.staticfiles import StaticFiles
 
 from app.routers import batch
 
-app = FastAPI(title="RazorRecovery API")
+app = FastAPI(title="RazorRecovery API", version="2.0.0")
 
-# Allow the frontend (served separately or from same origin) to call this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # fine for a hackathon demo; restrict in real production
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

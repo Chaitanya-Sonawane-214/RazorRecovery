@@ -1,0 +1,31 @@
+{
+  "total_transactions": 1000,
+  "rule_based": {
+    "recovered_count": 351,
+    "recovered_amount": 9854732.72,
+    "escalated_count": 180,
+    "total_operational_cost": 1437.5,
+    "net_value": 9853295.22,
+    "recovery_rate_percent": 35.1
+  },
+  "ml_augmented": {
+    "recovered_count": 349,
+    "recovered_amount": 9792602.88,
+    "escalated_count": 272,
+    "total_operational_cost": 1829.5,
+    "net_value": 9790773.38,
+    "recovery_rate_percent": 34.9
+  },
+  "ml_advantage": {
+    "recoveries_ml_caught_rules_missed": 0,
+    "unnecessary_retries_ml_avoided": 92,
+    "operational_cost_savings": -392.0,
+    "net_value_uplift": -62521.84,
+    "recovery_rate_delta_pp": -0.2,
+    "verdict": "Rule-based marginally ahead on this batch"
+  },
+  "cost_assumptions": {
+    "retry_cost_per_attempt_inr": 0.5,
+    "escalation_cost_human_inr": 5.0
+  }
+}

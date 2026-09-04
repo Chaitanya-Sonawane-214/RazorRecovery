@@ -3,74 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RazorRecovery Dashboard</title>
+    <title>RazorRecovery</title>
+    <meta name="description" content="AI-powered payment recovery agent — batch results, A/B comparison, ROI analytics, and real-time simulation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>💰 RazorRecovery</h1>
-        <p class="subtitle">AI-powered payment recovery — batch results dashboard</p>
+
+<!-- ════════════ SIDEBAR ════════════ -->
+<aside class="sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-wordmark">Razor<span>Recovery</span></div>
+        <div class="brand-tag">AI Revenue Agent</div>
+    </div>
+
+    <div class="sidebar-section">
+        <div class="sidebar-section-label">Analytics</div>
+        <button class="nav-item active" id="nav-overview"     onclick="switchPanel('overview')">
+            <span class="nav-icon">⊞</span> Overview
+        </button>
+        <button class="nav-item" id="nav-ab"                  onclick="switchPanel('ab')">
+            <span class="nav-icon">⚖</span> A/B Comparison
+        </button>
+        <button class="nav-item" id="nav-roi"                 onclick="switchPanel('roi')">
+            <span class="nav-icon">◈</span> Cost / ROI
+        </button>
+    </div>
+
+    <div class="sidebar-section">
+        <div class="sidebar-section-label">Data</div>
+        <button class="nav-item" id="nav-transactions"        onclick="switchPanel('transactions')">
+            <span class="nav-icon">≡</span> Transactions
+        </button>
+        <button class="nav-item" id="nav-directions"          onclick="switchPanel('directions')">
+            <span class="nav-icon">⊕</span> Directions
+        </button>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="rzp-status">
+            <div class="rzp-dot" id="rzp-dot"></div>
+            <div class="rzp-text" id="razorpay-mode-text">Checking...</div>
+        </div>
+    </div>
+</aside>
+
+<!-- ════════════ MAIN ════════════ -->
+<div class="main-wrap">
+
+    <!-- Top bar -->
+    <header class="topbar">
+        <span class="page-title" id="topbar-title">Overview</span>
+        <button class="btn-simulate" id="btn-simulate" onclick="startSimulation()">
+            ▶&nbsp; Live Simulation
+        </button>
     </header>
 
-    <main>
-        <!-- Summary cards -->
-        <section class="summary-grid" id="summary-grid">
-            <div class="card">
-                <span class="card-label">Total Processed</span>
-                <span class="card-value" id="total-transactions">—</span>
+    <!-- Simulation banner -->
+    <div class="sim-overlay" id="sim-overlay" style="display:none">
+        <div class="sim-banner">
+            <div class="sim-pulse"></div>
+            <span id="sim-status-text">Initialising...</span>
+            <div class="sim-progress-wrap">
+                <div class="sim-progress-bar" id="sim-progress-bar" style="width:0%"></div>
             </div>
-            <div class="card highlight">
-                <span class="card-label">Recovery Rate</span>
-                <span class="card-value" id="recovery-rate">—</span>
-            </div>
-            <div class="card success">
-                <span class="card-label">Amount Recovered</span>
-                <span class="card-value" id="amount-recovered">—</span>
-            </div>
-            <div class="card">
-                <span class="card-label">Total At Risk</span>
-                <span class="card-value" id="amount-at-risk">—</span>
-            </div>
-        </section>
-
-        <!-- Breakdown -->
-        <section class="breakdown">
-            <h2>Outcome Breakdown</h2>
-            <div class="breakdown-bars" id="breakdown-bars"></div>
-        </section>
-
-        <!-- Transaction table -->
-        <section class="transactions">
-            <div class="transactions-header">
-                <h2>Transactions</h2>
-                <select id="status-filter">
-                    <option value="">All statuses</option>
-                    <option value="recovered">Recovered</option>
-                    <option value="escalated_max_attempts">Escalated (max attempts)</option>
-                    <option value="escalated_low_probability">Escalated (low probability)</option>
-                    <option value="retry_failed">Retry failed</option>
+            <span class="sim-count" id="sim-count-text">0 / 0</span>
+            <div class="sim-controls">
+                <button onclick="pauseSimulation()" id="btn-pause">⏸ Pause</button>
+                <button onclick="stopSimulation()">⏹ Stop</button>
+                <select id="sim-speed" onchange="changeSimSpeed(this.value)">
+                    <option value="0.5">0.5×</option>
+                    <option value="1" selected>1×</option>
+                    <option value="2">2×</option>
+                    <option value="5">5×</option>
                 </select>
             </div>
-            <div class="table-wrapper">
-                <table id="transactions-table">
+        </div>
+    </div>
+
+    <!-- Page body -->
+    <div class="page-body">
+
+        <!-- KPI strip — always visible -->
+        <div class="kpi-strip" id="kpi-strip">
+            <div class="kpi-item">
+                <div class="kpi-label">Total Processed</div>
+                <div class="kpi-value" id="kpi-val-total">—</div>
+                <div class="kpi-sub">transactions</div>
+            </div>
+            <div class="kpi-item accent">
+                <div class="kpi-label">Recovery Rate</div>
+                <div class="kpi-value" id="kpi-val-rate">—</div>
+                <div class="kpi-sub">ML-augmented</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">Revenue Recovered</div>
+                <div class="kpi-value" id="kpi-val-recovered">—</div>
+                <div class="kpi-sub" id="kpi-sub-recovered">—</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">Net ROI</div>
+                <div class="kpi-value" id="kpi-val-roi">—</div>
+                <div class="kpi-sub">after costs</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">ML Uplift</div>
+                <div class="kpi-value" id="kpi-val-uplift">—</div>
+                <div class="kpi-sub">vs rule-based</div>
+            </div>
+        </div>
+
+        <!-- ── OVERVIEW ── -->
+        <section class="panel active" id="panel-overview">
+            <div class="section-heading">
+                <div class="section-title">Overview</div>
+                <div class="section-desc">Batch results across all 1,000 transactions · 4 directions</div>
+            </div>
+            <div class="two-col">
+                <div class="card">
+                    <div class="card-title">Outcome Breakdown</div>
+                    <div id="outcome-bars"></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Root Cause Distribution</div>
+                    <div id="cause-bars"></div>
+                </div>
+            </div>
+            <div class="card" id="feed-card" style="display:none">
+                <div class="card-title">Live Feed</div>
+                <div class="live-feed" id="live-feed"></div>
+            </div>
+        </section>
+
+        <!-- ── A/B COMPARISON ── -->
+        <section class="panel" id="panel-ab">
+            <div class="section-heading">
+                <div class="section-title">A/B Comparison</div>
+                <div class="section-desc">Rule-based stopping vs. ML-augmented stopping — quantified</div>
+            </div>
+            <div class="ab-header-row">
+                <div class="ab-arm">
+                    <div class="arm-name">Control — Rule-Based</div>
+                    <div class="arm-desc">Stops only at attempt cap (≥ 3 retries)</div>
+                </div>
+                <div class="ab-vs">vs</div>
+                <div class="ab-arm treat">
+                    <div class="arm-name">Treatment — ML Augmented</div>
+                    <div class="arm-desc">Also stops when recovery probability &lt; 20%</div>
+                </div>
+            </div>
+            <div class="ab-metrics-grid" id="ab-metrics"></div>
+            <div class="ab-verdict" id="ab-verdict"></div>
+        </section>
+
+        <!-- ── COST / ROI ── -->
+        <section class="panel" id="panel-roi">
+            <div class="section-heading">
+                <div class="section-title">Cost / ROI</div>
+                <div class="section-desc">Revenue recovered vs. operational cost of retries and escalations</div>
+            </div>
+            <div class="roi-grid" id="roi-grid"></div>
+            <div class="be-card"  id="break-even-card"></div>
+        </section>
+
+        <!-- ── TRANSACTIONS ── -->
+        <section class="panel" id="panel-transactions">
+            <div class="section-heading">
+                <div class="section-title">Transactions</div>
+                <div class="section-desc">Full audit log — filter by status, direction, or transaction ID</div>
+            </div>
+            <div class="filters-row">
+                <select id="status-filter" onchange="loadTransactions()">
+                    <option value="">All statuses</option>
+                    <option value="recovered">Recovered</option>
+                    <option value="escalated_max_attempts">Escalated — max attempts</option>
+                    <option value="escalated_low_probability">Escalated — low probability</option>
+                    <option value="retry_failed">Retry failed</option>
+                </select>
+                <select id="direction-filter" onchange="loadTransactions()">
+                    <option value="">All directions</option>
+                    <option value="payment_failure">Payment Failure</option>
+                    <option value="checkout_abandonment">Checkout Abandonment</option>
+                    <option value="subscription_lapsed">Subscription Lapsed</option>
+                    <option value="b2b_receivable">B2B Receivable</option>
+                </select>
+                <input type="text" id="search-filter" placeholder="Search transaction ID..." oninput="loadTransactions()">
+            </div>
+            <div class="table-wrap">
+                <table>
                     <thead>
                         <tr>
-                            <th>Transaction ID</th>
+                            <th>ID</th>
+                            <th>Direction</th>
                             <th>Amount</th>
                             <th>Root Cause</th>
                             <th>Action</th>
-                            <th>Recovery Prob.</th>
+                            <th>ML Prob</th>
                             <th>Status</th>
+                            <th>Razorpay</th>
+                            <th></th>
                         </tr>
                     </thead>
-                    <tbody id="transactions-body">
-                        <tr><td colspan="6" class="loading">Loading...</td></tr>
+                    <tbody id="txn-body">
+                        <tr><td colspan="9" class="loading">Loading transactions...</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
-    </main>
 
-    <script src="script.js"></script>
+        <!-- ── DIRECTIONS ── -->
+        <section class="panel" id="panel-directions">
+            <div class="section-heading">
+                <div class="section-title">Directions</div>
+                <div class="section-desc">Recovery performance across all four revenue recovery directions</div>
+            </div>
+            <div class="directions-grid" id="directions-grid"></div>
+        </section>
+
+    </div><!-- /page-body -->
+</div><!-- /main-wrap -->
+
+<!-- Explain Modal -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeModal()" style="display:none">
+    <div class="modal" onclick="event.stopPropagation()">
+        <div class="modal-head">
+            <h3 id="modal-title">Decision Explanation</h3>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

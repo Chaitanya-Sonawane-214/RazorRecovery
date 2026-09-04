@@ -1,27 +1,121 @@
 {
-  "total_transactions": 600,
-  "total_amount_at_risk": 4671039.05,
+  "total_transactions": 1000,
+  "total_amount_at_risk": 30476038.62,
+  "razorpay_mode": "live_test",
   "recovered": {
-    "count": 223,
-    "amount": 1678471.49
+    "count": 349,
+    "amount": 9792602.88
   },
   "escalated_max_attempts": {
-    "count": 110,
-    "amount": 933054.1
+    "count": 180,
+    "amount": 4229550.97
   },
   "escalated_low_probability": {
-    "count": 75,
-    "amount": 571331.2
+    "count": 92,
+    "amount": 7994676.72
   },
   "retry_failed": {
-    "count": 192,
-    "amount": 1488182.26
+    "count": 379,
+    "amount": 8459208.05
   },
-  "recovery_rate_percent": 37.2,
+  "recovery_rate_percent": 34.9,
   "root_cause_breakdown": {
     "bank_server_delay": 287,
     "no_money": 179,
+    "checkout_drop": 151,
     "user_error": 82,
-    "card_issue": 52
+    "mandate_issue": 67,
+    "overdue_invoice": 54,
+    "card_issue": 52,
+    "checkout_friction": 49,
+    "subscription_inactive": 33,
+    "credit_blocked": 31,
+    "dispute_open": 15
+  },
+  "per_direction": {
+    "b2b_receivable": {
+      "total": 100,
+      "recovered_count": 29,
+      "recovered_amount": 7803883.71,
+      "recovery_rate_percent": 29.0
+    },
+    "checkout_abandonment": {
+      "total": 200,
+      "recovered_count": 69,
+      "recovered_amount": 264989.81,
+      "recovery_rate_percent": 34.5
+    },
+    "payment_failure": {
+      "total": 600,
+      "recovered_count": 224,
+      "recovered_amount": 1682059.13,
+      "recovery_rate_percent": 37.3
+    },
+    "subscription_lapsed": {
+      "total": 100,
+      "recovered_count": 27,
+      "recovered_amount": 41670.23,
+      "recovery_rate_percent": 27.0
+    }
+  },
+  "ab_comparison_summary": {
+    "rule_recovery_rate": 35.1,
+    "ml_recovery_rate": 34.9,
+    "rate_delta_pp": -0.2,
+    "cost_savings_inr": -392.0,
+    "net_value_uplift_inr": -62521.84
+  },
+  "roi": {
+    "revenue": {
+      "gross_recovered": 9792602.88,
+      "gateway_fees": 195852.06,
+      "net_recovered": 9596750.82
+    },
+    "costs": {
+      "retry_cost": 844.0,
+      "escalation_cost": 1360.0,
+      "total_operational_cost": 2204.0
+    },
+    "roi": {
+      "net_roi": 9594546.82,
+      "roi_percent": 435324.3,
+      "cost_per_recovered_rupee": 0.0002
+    },
+    "break_even": {
+      "min_recoveries_needed": 1,
+      "break_even_recovery_rate_percent": 0.1,
+      "actual_recovery_rate_percent": 34.9
+    },
+    "per_direction": {
+      "b2b_receivable": {
+        "gross_revenue_recovered": 7803883.71,
+        "operational_cost": 300.0,
+        "net_roi": 7803583.71,
+        "transaction_count": 100
+      },
+      "checkout_abandonment": {
+        "gross_revenue_recovered": 264989.81,
+        "operational_cost": 369.5,
+        "net_roi": 264620.31,
+        "transaction_count": 200
+      },
+      "payment_failure": {
+        "gross_revenue_recovered": 1682059.13,
+        "operational_cost": 1343.5,
+        "net_roi": 1680715.63,
+        "transaction_count": 600
+      },
+      "subscription_lapsed": {
+        "gross_revenue_recovered": 41670.23,
+        "operational_cost": 191.0,
+        "net_roi": 41479.23,
+        "transaction_count": 100
+      }
+    },
+    "cost_assumptions": {
+      "retry_cost_per_attempt_inr": 0.5,
+      "escalation_cost_human_inr": 5.0,
+      "gateway_fee_percent": 0.02
+    }
   }
 }

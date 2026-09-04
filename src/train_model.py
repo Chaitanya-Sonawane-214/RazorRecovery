@@ -113,7 +113,7 @@ if __name__ == "__main__":
     # quick sanity test — predict on a couple of made-up examples
     print("\n--- Sample predictions ---")
     prob1 = predict_recovery_probability(pipeline, "UPI", "bank_server_delay", 1500, 1)
-    print(f"UPI, bank_server_delay, ₹1500, attempt 1  -> recovery probability: {prob1:.1%}")
+    print(f"UPI, bank_server_delay, INR 1500, attempt 1  -> recovery probability: {prob1:.1%}")
 
     prob2 = predict_recovery_probability(pipeline, "Credit Card", "card_issue", 8000, 3)
-    print(f"Credit Card, card_issue, ₹8000, attempt 3  -> recovery probability: {prob2:.1%}")
+    print(f"Credit Card, card_issue, INR 8000, attempt 3  -> recovery probability: {prob2:.1%}")
