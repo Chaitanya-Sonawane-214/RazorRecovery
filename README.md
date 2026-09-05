@@ -4,7 +4,7 @@
 
 **RazorRecovery** detects revenue at risk, diagnoses why it's slipping away, decides the right recovery action, and executes a bounded, auditable recovery workflow — across four real revenue-loss scenarios, not just one.
 
-🎥 **[Watch the 5-minute pitch video](https://drive.google.com/file/d/10gm6fdemayn9TRCXwUpv8VkenXwjhlNb/view?usp=drive_link)**
+🎥 **[Watch the 5-minute pitch video](https://drive.google.com/file/d/17Jb8AKmyDJ8bt7sD12iwJxCQK5_ChL6L/view?usp=sharing)**
 
 ---
 
