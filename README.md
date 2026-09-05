@@ -71,24 +71,24 @@ ML-augmented stopping shows a **marginal recovery-rate tradeoff (-0.2pp)** on th
 ## 🏗️ Architecture
 ```bash
 Failed event (payment / checkout / subscription / B2B)
-│
-▼
+              │
+              ▼
 Root cause detection (rule-based)
-│
-▼
+              │
+              ▼
 Action selector (rule-based)
-│
-▼
+              │
+              ▼
 ML recovery-probability model ──► Stop or continue?
-│ │
-▼ ▼
+              │ 
+              ▼
 Razorpay API call Escalate (compliant,
 (capture / refund) logged, bounded)
-│
-▼
+              │
+              ▼
 Structured explainability + audit log entry
-│
-▼
+              │
+              ▼
 Batch report (₹ recovered, recovery rate, A/B, ROI)
 ```
 
