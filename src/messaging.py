@@ -2,9 +2,11 @@
 Phase 4 (Extended): LLM-powered customer messaging — all 4 directions.
 
 Extended with messages for checkout abandonment, subscription lapsed,
-and B2B receivables. Same dual-mode (Ollama / Claude) and caching
-architecture as before — at most one LLM call per unique
-(root_cause, action) pair regardless of batch size.
+and B2B receivables. Provider priority: gemini → ollama → claude → fallback.
+At most one LLM call per unique (root_cause, action) pair (cached).
+
+Gemini Flash (free tier: 1500 req/day) is the recommended provider.
+Set GEMINI_API_KEY in .env and LLM_PROVIDER=gemini.
 """
 
 import os
@@ -12,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "fallback")  # default to fast fallback; set ollama/claude in .env
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "fallback")  # gemini / ollama / claude / fallback
 
 # In-memory cache: (root_cause, action) → generated message
 _message_cache: dict[str, str] = {}
@@ -105,6 +107,50 @@ PROMPT_TEMPLATE = (
 )
 
 
+GEMINI_TIMEOUT_SECONDS = 15  # fail fast → fallback if network is slow
+
+
+def _gemini_api_call(prompt: str) -> str:
+    """Inner call — runs in a thread so we can enforce a hard timeout."""
+    from google import genai
+    from google.genai import types
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY not set in .env")
+    client = genai.Client(api_key=api_key)
+    response = client.models.generate_content(
+        model="models/gemini-flash-latest",
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            temperature=0.7,
+            max_output_tokens=150,
+        ),
+    )
+    # response.text may be None for thinking models — extract from parts
+    if response.text:
+        return response.text.strip()
+    for candidate in (response.candidates or []):
+        for part in (getattr(candidate.content, "parts", None) or []):
+            text = getattr(part, "text", None)
+            if text:
+                return text.strip()
+    raise ValueError("Gemini returned no text content")
+
+
+def _call_gemini(prompt: str) -> str:
+    """Call Google Gemini Flash with a hard timeout.
+    Free tier: 1500 requests/day. Falls back gracefully if network is slow."""
+    import concurrent.futures
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+        future = pool.submit(_gemini_api_call, prompt)
+        try:
+            return future.result(timeout=GEMINI_TIMEOUT_SECONDS)
+        except concurrent.futures.TimeoutError:
+            raise TimeoutError(
+                f"Gemini did not respond within {GEMINI_TIMEOUT_SECONDS}s"
+            )
+
+
 def _call_ollama(prompt: str) -> str:
     import ollama
     response = ollama.chat(
@@ -125,20 +171,54 @@ def _call_claude(prompt: str) -> str:
     return response.content[0].text.strip()
 
 
-def generate_message(root_cause: str, action: str) -> str:
-    """Returns a customer-facing message for a given root cause + action.
-    Cached per (root_cause, action) pair."""
+# ── Hinglish prompt (for payment_failure direction — addresses track example) ──
 
-    cache_key = f"{root_cause}|{action}"
+HINGLISH_PROMPT_TEMPLATE = (
+    "A customer's payment failed. Root cause: {root_cause}. "
+    "Recommended action: {action}.\n\n"
+    "Write ONE short, warm message in Hinglish (mix of Hindi and English) "
+    "as a support SMS/WhatsApp message would sound — 1-2 sentences max. "
+    "Be friendly, natural, and clear about what the customer should do next.\n\n"
+    "Example: root_cause=insufficient_funds, action=send_reminder_after_6_hours\n"
+    "\"Aapka payment balance kam hone ki wajah se fail ho gaya. "
+    "Thodi der mein dobara try karein — hum aapki madad ke liye hain! 😊\"\n\n"
+    "Now write a Hinglish message for root_cause={root_cause}, action={action}. "
+    "Return only the message text, nothing else."
+)
+
+# Payment-failure root causes that get a Hinglish variant
+_PAYMENT_ROOT_CAUSES = {
+    "bank_server_delay", "no_money", "user_error", "card_issue"
+}
+
+
+def generate_message(root_cause: str, action: str, hinglish: bool = False) -> str:
+    """Returns a customer-facing message for a given root cause + action.
+
+    Args:
+        root_cause: Root cause string from rules_engine.
+        action:     Recommended action string from rules_engine.
+        hinglish:   If True and root_cause is a payment failure,
+                    returns a Hinglish variant (uses LLM if available).
+
+    Cached per (root_cause, action, hinglish) triple.
+    """
+    cache_key = f"{root_cause}|{action}|{'hi' if hinglish else 'en'}"
     if cache_key in _message_cache:
         return _message_cache[cache_key]
 
-    prompt = PROMPT_TEMPLATE.format(root_cause=root_cause, action=action)
+    # Choose the right prompt
+    if hinglish and root_cause in _PAYMENT_ROOT_CAUSES:
+        prompt = HINGLISH_PROMPT_TEMPLATE.format(root_cause=root_cause, action=action)
+    else:
+        prompt = PROMPT_TEMPLATE.format(root_cause=root_cause, action=action)
 
     try:
         if LLM_PROVIDER == "fallback":
             # Skip LLM entirely — use curated fallback messages directly
             message = FALLBACK_MESSAGES.get(root_cause, FALLBACK_MESSAGES["unknown"])
+        elif LLM_PROVIDER == "gemini":
+            message = _call_gemini(prompt)
         elif LLM_PROVIDER == "ollama":
             message = _call_ollama(prompt)
         elif LLM_PROVIDER == "claude":
@@ -165,4 +245,9 @@ if __name__ == "__main__":
     print(f"Testing messaging layer (provider: {LLM_PROVIDER})\n")
     for cause, action in ROOT_CAUSE_TO_ACTION.items():
         msg = generate_message(cause, action)
-        print(f"  [{cause} -> {action}]\n  -> {msg}\n")
+        print(f"  [{cause} -> {action}]\n  EN: {msg}")
+        # Show Hinglish variant for payment root causes
+        if cause in _PAYMENT_ROOT_CAUSES:
+            hi_msg = generate_message(cause, action, hinglish=True)
+            print(f"  HI: {hi_msg}")
+        print()

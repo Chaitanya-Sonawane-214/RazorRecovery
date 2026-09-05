@@ -328,9 +328,11 @@ def print_summary(summary: dict):
     print(f"\nA/B uplift (ML vs rules)  : {ab['rate_delta_pp']:+.1f} pp recovery rate")
     print(f"Operational cost savings  : INR {ab['cost_savings_inr']:,.2f}")
     roi = summary["roi"]["roi"]
-    print(f"\nNet ROI                   : INR {roi['net_roi']:,.2f} ({roi['roi_percent']}%)")
+    print(f"\nNet ROI                   : INR {roi['net_roi']:,.2f} ({roi['cost_efficiency_percent']}%)")
     print("=" * 55)
 
 
 if __name__ == "__main__":
     run_batch()
+
+    

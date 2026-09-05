@@ -79,7 +79,8 @@ function populateKPIs(s) {
     document.getElementById('kpi-val-recovered').textContent = fmt(s.recovered?.amount);
     document.getElementById('kpi-sub-recovered').textContent = `${s.recovered?.count || 0} transactions`;
     const roi = s.roi?.roi;
-    if (roi) document.getElementById('kpi-val-roi').textContent = fmtPct(roi.roi_percent);
+    // if (roi) document.getElementById('kpi-val-roi').textContent = fmtPct(roi.roi_percent);
+    if (roi) document.getElementById('kpi-val-roi').textContent = fmt(roi.net_roi);
     const ab = s.ab_comparison_summary;
     if (ab) document.getElementById('kpi-val-uplift').textContent = fmtPP(ab.rate_delta_pp);
 }
@@ -205,7 +206,7 @@ function populateROITab(s) {
         <div class="roi-section">
             <div class="roi-sec-title">Return on Investment</div>
             <div class="roi-row"><span class="roi-row-lbl">Net ROI</span><span class="roi-row-val">${fmt(kpis.net_roi)}</span></div>
-            <div class="roi-row"><span class="roi-row-lbl">ROI %</span><span class="roi-row-val">${fmtPct(kpis.roi_percent)}</span></div>
+            <div class="roi-row"><span class="roi-row-lbl">Cost Efficiency</span><span class="roi-row-val">${fmtPct(kpis.cost_efficiency_percent)}</span></div>
             <div class="roi-row"><span class="roi-row-lbl">Cost per ₹1 recovered</span><span class="roi-row-val lo">₹${kpis.cost_per_recovered_rupee?.toFixed(4) || '—'}</span></div>
         </div>`;
 

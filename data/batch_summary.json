@@ -78,7 +78,7 @@
     },
     "roi": {
       "net_roi": 9594546.82,
-      "roi_percent": 435324.3,
+      "cost_efficiency_percent": 0.023,
       "cost_per_recovered_rupee": 0.0002
     },
     "break_even": {

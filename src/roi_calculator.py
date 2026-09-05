@@ -61,10 +61,16 @@ def compute_roi(audit_df: pd.DataFrame) -> dict:
     )
 
     # --- Net ROI ---
+    # net_roi = round(net_revenue_recovered - total_operational_cost, 2)
+    # roi_percent = (
+    #     round(net_roi / total_operational_cost * 100, 1)
+    #     if total_operational_cost > 0 else 0
+    # )
+
     net_roi = round(net_revenue_recovered - total_operational_cost, 2)
-    roi_percent = (
-        round(net_roi / total_operational_cost * 100, 1)
-        if total_operational_cost > 0 else 0
+    cost_efficiency_percent = (
+        round(total_operational_cost / gross_revenue_recovered * 100, 3)
+        if gross_revenue_recovered > 0 else 0
     )
 
     # Cost efficiency: how many paise spent per rupee recovered
@@ -114,7 +120,8 @@ def compute_roi(audit_df: pd.DataFrame) -> dict:
         },
         "roi": {
             "net_roi": net_roi,
-            "roi_percent": roi_percent,
+            # "roi_percent": roi_percent,
+            "cost_efficiency_percent": cost_efficiency_percent,
             "cost_per_recovered_rupee": cost_per_recovered_rupee,
         },
         "break_even": {
